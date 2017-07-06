@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.indexContent3 {
+ float:left; 
+ width:1300px;
+ background:#fff;
+  margin-top:20px;
+
+	
+
+}
+.indexContent3TitleBox {
+
+	height: 35px;
+}
+.indexContent3Title {
+	overflow: hidden;
+	margin-top: 15px;
+
+}
+
+.indexContent3Title dd {
+	float: left;
+
+	margin: 0 0px 0 0;
+	line-height: 25px
+}
+.indexContent3Title dd a {
+	display: block;
+	
+	color: #333;
+	font-size: 14px;
+	height: 29px;
+	
+	 font-family:"微软雅黑";
+	 width:90px;
+	 line-height:29px;
+	 background:#eee;
+	 margin:0px 2px;
+	 
+}
+.indexContent3Title dd.hover a {
+background:#50AB2A;
+	color: #fff
+}
+/*图片滚动开始*/
+.picScroll-left {
+	position: relative;
+}
+/*内容*/		
+.picScroll-left .bd {
+	height: 100%;
+	z-index: 0;
+	width: 1300px;
+	overflow: hidden;
+
+}
+.picScroll-left .bd li {
+	zoom: 1;
+	vertical-align: middle;
+	float: left;
+	width: 200px;
+	overflow: hidden;
+	 margin:0px 10px;
+
+}
+.picBox {
+	display: block;
+	overflow: hidden;
+	width: 200px;
+	height: 240px;
+	position: relative;
+}
+
+.picScroll-left .bd li span {
+	display: block;
+
+	line-height: 25px;
+	text-align: center;
+	color: #666;
+	font-size: 12px;
+	margin-top:10px;
+	 float:left;
+
+}
+.picScroll-leftText {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background: url(../images/picScrollhover.png) repeat;
+	display: none;
+}
+.picScroll-leftText a {
+	display: block;
+	height: 75px;
+	color: #ffffff;
+	padding: 60px 20px 0 20px;
+	line-height: 25px;
+	overflow:hidden
+}
+/* 下面是前/后按钮代码，如果不需要删除即可 */
+.picScroll-left .prev {
+	display: block;
+	position: absolute;
+	width:22px;
+	height: 46px;
+	background: url(../images/k_ico_left.jpg) no-repeat center center;
+	left: -45px;
+	top: 150px;
+}
+.picScroll-left .next {
+	display: block;
+	position: absolute;
+	width: 22px;
+	height: 46px;
+	background: url(../images/k_ico_right.jpg) no-repeat center center;
+	right: -45px;
+	top: 150px;
+}
+.picScroll-left .prevStop {
+	display: none;
+}
+.picScroll-left .nextStop {
+	display: none;
+}
