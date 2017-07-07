@@ -37,10 +37,10 @@
     <div class="conterbody navBar">
       <ul class="nav clearfix">
         <li class="m">
-          <h3><a href="http://www.ikdeer.com:8080">Home</a></h3>
+          <h3><a href="http://www.ikdeer.com:80">Home</a></h3>
         </li>
         <li class="m" style="position:relative;" id="intopshow">
-          <h3><a href="http://www.ikdeer.com:8080/gradevins">Wine cooler</a></h3>
+          <h3><a href="http://www.ikdeer.com:80/gradevins">Wine cooler</a></h3>
           
           <script>
 $("#intopshow").mousemove(function(){
@@ -52,7 +52,7 @@ $(this).find(".catGroup").css("display","none");
 </script>
         </li>
         <li class="m" style="position:relative;" id="intopshow1">
-          <h3><a href="http://www.ikdeer.com:8080/phonographs">Phonograph</a></h3>
+          <h3><a href="http://www.ikdeer.com:80/phonographs">Phonograph</a></h3>
           
           <script>
 $("#intopshow1").mousemove(function(){
@@ -76,7 +76,7 @@ $(this).find(".catGroup").css("display","none");
 </script>
         </li>
         <li class="m" style="position:relative;" id="intopshow3">
-          <h3><a href="http://www.ikdeer.com:8080/contact?info_id=0">Contact</a></h3>
+          <h3><a href="http://www.ikdeer.com:80/contact?info_id=0">Contact</a></h3>
           <script>
 $("#intopshow3").mousemove(function(){
 $(this).find(".catGroup").css("display","block");
@@ -93,7 +93,7 @@ $(this).find(".catGroup").css("display","none");
   
   
          <div id="search">
-        <form name="forms" method="post" action="http://www.ikdeer.com:8080/search">
+        <form name="forms" method="post" action="http://www.ikdeer.com:80/search">
           <input type="image" name="imageField" src="/static/home/src_ico.jpg" border="0" style="float:right; padding-right:8px; margin-top:8px;">
           <span class="searchk">
           <input name="word" type="text" id="word" class="scr_text" onfocus="this.value=&#39;&#39;" value="Product">
@@ -255,7 +255,7 @@ ImgD.height=image.height;
            
           
           <div id="spec-list">
-            <div style="position:relative;overflow:hidden;z-index:1;width:400px;height:8080px;"><ul class="list-h" style="width: 648px; overflow: hidden; position: absolute; left: 0px; top: 0px; margin-top: 0px; margin-left: 0px;">
+            <div style="position:relative;overflow:hidden;z-index:1;width:400px;height:80px;"><ul class="list-h" style="width: 648px; overflow: hidden; position: absolute; left: 0px; top: 0px; margin-top: 0px; margin-left: 0px;">
               {% for pic_url in product._img_url %}
               			<li>
               				<a href= {{ product._detailpageurl }} >
@@ -282,7 +282,7 @@ ImgD.height=image.height;
 		$("#spec-list").jdMarquee({
 			deriction:"left",
 			width:400,
-			height:8080,
+			height:80,
 			step:2,
 			speed:4,
 			delay:10,
@@ -427,7 +427,7 @@ ImgD.height=image.height;
   <div class="foot_top_left">
     <ul>
       	<li> 
-      		<a href="http://www.ikdeer.com:8080">
+      		<a href="http://www.ikdeer.com:80">
         		<h2>ABOUT US</h2>
         	</a>
         	<ul>
