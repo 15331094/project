@@ -1,10 +1,10 @@
 from flask import *
-import arrange
+from project.arrange import get_product_info
 import random
 
 app = Flask(__name__)
 
-info = arrange.get_product_info()
+info = get_product_info()
 
 @app.route("/")
 def home():
@@ -76,7 +76,7 @@ def contact():
         
 
 if __name__ == "__main__":
-    app.run(host = "0.0.0.0", port = 80)
+    app.run(host = "0.0.0.0", port = 8080)
 
 
 
