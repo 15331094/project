@@ -123,3 +123,9 @@ http://www.ikdeer.com:80
 
 
 sudo chown -R ubuntu:ubuntu /var/www/demoapp/
+
+
+      <div style="width: 1300px; height: 500px; top: 0px; left: 0px; position: absolute; overflow: hidden; display: none;"> <img data-u="image" src={{ poster_url }} >
+        <div style="position: absolute; width: 450px; height: auto; top: 130px; left: 200px; padding: 5px;text-align: left; line-height: 50px; text-transform: uppercase; font-size: 45px;font-family: &#39;Open Sans&#39;, sans-serif; text-transform:uppercase;color: #FFF; font-weight:300;">  </div>
+
+      </div>
