@@ -30,10 +30,11 @@ def render_gradevins_list():
 @app.route("/detail")
 def detail():
     name = request.args.get('name')
+    print(name)
     Gradevins, Phonographs = info
     products = Gradevins + Phonographs
     for p in products:
-        if p._name == name:
+        if p._name == name.replace("-", " "):
             return render_template("detail.html", product = p, all_products = products)
     abort(401)
 

@@ -6,7 +6,7 @@ class product(object):
 	def __init__(self, name, img_url, description):
 		self._name = name
 		self._img_url = img_url
-		self._detailpageurl = "http://www.ikdeer.com:8080/detail?name=" + name
+		self._detailpageurl = "http://www.ikdeer.com:80/detail?name=" + name.replace(" ", "-")
 		self._description = description
 	def get_name(self):
 		return self._name
@@ -23,7 +23,7 @@ def get_product_info():
 	#酒柜和酒列表
 	Gradevins_list = []
 	for each_product in Gradevins:
-		name = each_product[each_product.find("酒"):]
+		name = each_product.replace("-", " ")
 		imgs = os.listdir(Gradevins_base_dir + "/" + each_product)
 		pic_urls_list = []
 		for pic_url in imgs:
@@ -38,7 +38,7 @@ def get_product_info():
 	#留声机6.16
 	Phonographs_list = []	
 	for each_product in Phonographs:
-		name = each_product[each_product.find("留"):]
+		name = each_product.replace("-", " ")
 		imgs = os.listdir(Phonographs_base_dir + "/" + each_product)
 		pic_urls_list = []
 		for pic_url in imgs:
@@ -51,7 +51,7 @@ def get_product_info():
 	Phonographs = os.listdir(Phonographs_base_dir)
 
 	for each_product in Phonographs:
-		name = each_product[each_product.find("留"):]
+		name = each_product.replace("-", " ")
 		imgs = os.listdir(Phonographs_base_dir + "/" + each_product)
 		pic_urls_list = []
 		for pic_url in imgs:
