@@ -1,6 +1,7 @@
 from flask import *
 from project.arrange import get_product_info
 import random
+import difflib
 
 app = Flask(__name__)
 
@@ -44,7 +45,9 @@ def list_search_content():
     all_products = Gradevins + Phonographs
     result_products = []
     for product in all_products:
-        if product._name.find(search) != -1:
+        seq = difflib.SequenceMatcher(lambda x:x==" " or x == "-", product._name, search)
+        ratio = seq.ratio()
+        if ratio >= 0.4:
             result_products.append(product)
     return render_template("list.html", myproducts = result_products)
 

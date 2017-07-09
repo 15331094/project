@@ -35,65 +35,31 @@
   <div id="box">
     <div id="logo"><a href="/"><img src="/static/home/newlogo.png" border="0"></a> </div>
     <div class="conterbody navBar">
-      <ul class="nav clearfix">
-        <li class="m">
-          <h3><a href="/">Home</a></h3>
+      <ul style="width: 700px;"  class="nav clearfix">
+
+        <li class="m" style="position:relative;">
+          	<h3><a href="/">Home</a></h3>
         </li>
+
         <li class="m" style="position:relative;" id="intopshow">
-          <h3><a href="/gradevins">Winecooler</a></h3>
-          
-          <script>
-$("#intopshow").mousemove(function(){
-$(this).find(".catGroup").css("display","block");
-});
-$("#intopshow").mouseout(function(){
-$(this).find(".catGroup").css("display","none");
-});
-</script>
+          	<h3><a style="width: 150px;" href="/gradevins">Wine cooler</a></h3>
         </li>
-        <li class="m" style="position:relative;" id="intopshow1">
 
-
-          <script>
-$("#intopshow1").mousemove(function(){
-$(this).find(".catGroup").css("display","block");
-});
-$("#intopshow1").mouseout(function(){
-$(this).find(".catGroup").css("display","none");
-});
-</script>
-        </li>
         <li class="m" style="position:relative;" id="intopshow2">
-          <h3><a href="/phonographs">Phonograph</a></h3>
+          	<h3><a style="width:180px;" href="/phonographs">Vintage phonograph</a></h3>
+        </li>
 
-          <script>
-$("#intopshow2").mousemove(function(){
-$(this).find(".catGroup").css("display","block");
-});
-$("#intopshow2").mouseout(function(){
-$(this).find(".catGroup").css("display","none");
-});
-</script>
-        </li>
         <li class="m" style="position:relative;" id="intopshow3">
-          <h3><a href="/contact?info_id=0">Contact</a></h3>
-          
-          <script>
-$("#intopshow3").mousemove(function(){
-$(this).find(".catGroup").css("display","block");
-});
-$("#intopshow3").mouseout(function(){
-$(this).find(".catGroup").css("display","none");
-});
-</script>
+          	<h3><a href="/contact?info_id=0">Contact</a></h3>
         </li>
+
       </ul>
     </div>
   </div>
   
   
   
-         <div id="search">
+         <div  style="float:right;margin-right:8px;" id="search">
         <form name="forms" method="post" action="/search">
           <input type="image" name="imageField" src="/static/home/src_ico.jpg" border="0" style="float:right; padding-right:8px; margin-top:8px;">
           <span class="searchk">
@@ -256,7 +222,7 @@ $(document).ready(function(){
   <div id="home_pro_box">
  <a href="http://www.ikdeer.com/gradevins"><h3>View All</h3></a>
     <div class="n_pro_list_top">
-        <h2>Gradevins</h2>
+        <h2>Wine cooler</h2>
     </div>
     <ul> 
     	{% for Gradevin in Gradevins %}
@@ -377,7 +343,7 @@ ImgD.height=image.height;
         		<h2>ABOUT US</h2>
         	</a>
         	<ul>
-          		<li><a href="">主页</a></li>
+          		<li><a href="">Home</a></li>
           		<li><a href="">Activity</a></li>
         	</ul>
       	</li>
