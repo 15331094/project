@@ -20,3 +20,28 @@ Digital thermostat with push button controls an digital readout is easy to set a
 
 重启supervisor(root下)
         supervisorctl reload
+
+
+
+shares.json
+300lo.json
+ate.track.config_resp
+layers.4acb6c577b51939661ec.js
+double-tail-spin.svg
+s_home_more.jpg
+s_home_more2.jpg 
+sh.886bb8b2fb82aeab6a228151.html
+foot_ico.png
+k_ico_left.jpg
+k_ico_right.jpg
+graph.facebook.com
+s_n_back_a.jpg
+async-buttons.js
+ate.track.config_resp
+s_n_back_a.jpg
+r_n_probg.jpg
+s_h2_line.jpg
+stcommon.0128627f929f0b889d3e
+st.19a7e04ffd4c1e4250d6e6212f
+aa.agkn.com
+feature-point-next-4ie6.jpg
