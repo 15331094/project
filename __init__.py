@@ -62,14 +62,10 @@ def contact():
     style_id = [["pro1list1hh", "pro1list1"], ["pro1list1", "pro1list1hh"]]
     content_id = [
         [
-            "LOVPHONE ELECTRONIC CO., LTD.",
-            "Email: sales1@lovphone.com",
-            "Email:service@lovphone.com",
-            "Email: lovphone8@gmail.com",
-            "Skype : Lovphone",
-            "www.lovphone.com"
+            "www.ikdeer.com",
+            "Email: service@ikdeer.com"
         ],
-        ["Introduction"]        
+        ["www.ikdeer.com"]        
     ]
     #return render_template("contact.html")
     if info_id == 0 or info_id == 1:
