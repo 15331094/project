@@ -8,15 +8,9 @@ info = get_product_info()
 
 @app.route("/")
 def home():
-    poster_num = [1, 2, 3, 4]
-    random.shuffle(poster_num)
-    poster_urls = []
-    for i in range(4):
-        p_url = "/static/home/poster/" + str(poster_num[i]) + ".jpg"
-        poster_urls.append(p_url)
     Gradevins, Phonographs = info
     Gradevins = Gradevins[:4]
-    return render_template("home.html", Gradevins = Gradevins, Phonographs = Phonographs, poster_url = poster_urls)
+    return render_template("home.html", Gradevins = Gradevins, Phonographs = Phonographs)
 
 
 @app.route("/phonographs")
