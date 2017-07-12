@@ -48,7 +48,7 @@ def list_search_content():
         seq = difflib.SequenceMatcher(lambda x:x==" " or x == "-", product._name, search)
         ratio = seq.ratio()
         if ratio >= 0.55:
-            result_products.applicationend(product)
+            result_products.append(product)
     return render_template("list.html", myproducts = result_products)
 
 @application.route("/search", methods=['POST'])
