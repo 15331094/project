@@ -3,31 +3,31 @@ from project.arrange import get_product_info
 import random
 import difflib
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 info = get_product_info()
 
-@app.route("/")
+@application.route("/")
 def home():
     Gradevins, Phonographs = info
     Gradevins = Gradevins[:4]
     return render_template("home.html", Gradevins = Gradevins, Phonographs = Phonographs)
 
 
-@app.route("/phonographs")
+@application.route("/phonographs")
 def render_phonographs_list():
     Phonographs = info[1]
     #print(len(Phonographs))
     return render_template("list.html", myproducts = Phonographs)
 
-@app.route("/gradevins")
+@application.route("/gradevins")
 def render_gradevins_list():
     Gradevins = info[0]
     #print(len(Phonographs))
     return render_template("list.html", myproducts = Gradevins)
 
 
-@app.route("/detail")
+@application.route("/detail")
 def detail():
     name = request.args.get('name')
     print(name)
@@ -38,7 +38,7 @@ def detail():
             return render_template("detail.html", product = p, all_products = products)
     abort(401)
 
-@app.route("/list_search_content")
+@application.route("/list_search_content")
 def list_search_content():
     search = request.args.get('search')
     Gradevins, Phonographs = info
@@ -48,15 +48,15 @@ def list_search_content():
         seq = difflib.SequenceMatcher(lambda x:x==" " or x == "-", product._name, search)
         ratio = seq.ratio()
         if ratio >= 0.55:
-            result_products.append(product)
+            result_products.applicationend(product)
     return render_template("list.html", myproducts = result_products)
 
-@app.route("/search", methods=['POST'])
+@application.route("/search", methods=['POST'])
 def search():
     search_product = request.form['word']
     return redirect(url_for('list_search_content', search = search_product))
 
-@app.route("/contact")
+@application.route("/contact")
 def contact():
     info_id = int(request.args.get('info_id'))
     style_id = [["pro1list1hh", "pro1list1"], ["pro1list1", "pro1list1hh"]]
@@ -75,7 +75,7 @@ def contact():
         
 
 if __name__ == "__main__":
-    app.run(host = "0.0.0.0", port = 8080)
+    application.run(host = "0.0.0.0", port = 8080)
 
 
 

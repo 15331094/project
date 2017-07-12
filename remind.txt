@@ -10,7 +10,16 @@ Wine barrels Wine cabinet Phonograph
 Wine cooler
 
 
-Digital thermostat with push button controls an digital readout is easy to set and provides accurate temperature control Compact design fits in small spaces easily and requires only 4 of clearance on all sides! Interior LED light and clear glass door allows for optimal viewing Low noise level rating makes this unit a great option for any environment Thermoelectric design is vibration free to help preserve flavor and aroma Excellent customer reviews for superior temperature control Equipped with sliding and removable shelves for custom storage Easily stores up to 28 bottles of your favorite wine Modern design is made from top-quality materials and complements decor.
+{
+    "server":"165.227.9.185",
+    "server_port":8388,
+    "local_address": "127.0.0.1",
+    "local_port":1080,
+    "password":"Gzm20125",
+    "timeout":300,
+    "method":"aes-256-cfb",
+    "fast_open": false
+}
 
 
 
@@ -45,3 +54,60 @@ stcommon.0128627f929f0b889d3e
 st.19a7e04ffd4c1e4250d6e6212f
 aa.agkn.com
 feature-point-next-4ie6.jpg
+
+
+/var/www/demoapp/demoapp_nginx.conf
+
+server {
+    listen      80;
+    server_name localhost;
+    charset     utf-8;
+    client_max_body_size 75M;
+
+    location / { try_files $uri @yourapplication; }
+    location @yourapplication {
+        include uwsgi_params;
+        uwsgi_pass unix:/var/www/demoapp/demoapp_uwsgi.sock;
+    }
+}
+
+
+
+
+/var/www/demoapp/demoapp_uwsgi.ini
+
+[uwsgi]
+#application's base folder
+base = /var/www/demoapp
+
+#python module to import
+app = hello
+module = %(app)
+
+home = %(base)/venv
+pythonpath = %(base)
+
+#socket file's location
+socket = /var/www/demoapp/%n.sock
+
+#permissions for the socket file
+chmod-socket    = 666
+
+#the variable that holds a flask application inside the module imported at line #6
+callable = app
+
+#location of log files
+logto = /var/log/uwsgi/%n.log
+
+
+
+#最后追加
+/etc/supervisord.conf
+
+[program:hello]
+command = uwsgi --ini /var/www/demoapp/demoapp_uwsgi.ini
+stopsignal=QUIT
+autostart=true
+autorestart=true
+stdout_logfile=/var/log/uwsgi/supervisor_chihu.log
+stderr_logfile=/var/log/uwsgi/supervisor_chihu_err.log
