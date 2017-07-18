@@ -6,7 +6,7 @@ class product(object):
 	def __init__(self, name, img_url, description):
 		self._name = name
 		self._img_url = img_url
-		self._detailpageurl = "http://www.ikdeer.com:80/detail?name=" + name.replace(" ", "-")
+		self._detailpageurl = "/detail?name=" + name.replace(" ", "-")
 		self._description = description
 	def get_name(self):
 		return self._name
