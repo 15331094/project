@@ -73,10 +73,10 @@ logto = /var/log/uwsgi/%n.log
 #最后追加
 /etc/supervisord.conf
 
-[program:hello]
-command = uwsgi --ini /var/www/demoapp/demoapp_uwsgi.ini
+[program:lkzaiy]
+command = uwsgi --ini /var/www/lkzaiy/lkzaiy_uwsgi.ini
 stopsignal=QUIT
 autostart=true
 autorestart=true
-stdout_logfile=/var/log/uwsgi/supervisor_chihu.log
-stderr_logfile=/var/log/uwsgi/supervisor_chihu_err.log
+stdout_logfile=/var/log/uwsgi/supervisor_lkzaiy.log
+stderr_logfile=/var/log/uwsgi/supervisor_lkzaiy_err.log
